@@ -36,7 +36,7 @@ var logos = {
     },
     fs: {
         svg: '<div style="height:108px;"><svg id="topLogo" style="height:100px;" preserveAspectRatio="xMinYMax slice" data-name="topLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1160 100">'+
-        '    <title>fp9</title>'+
+        '    <title>fp10</title>'+
         // '    <image width="1160" height="100" xlink:href="images/topfs.jpg"/>'+
         // '    <text transform="translate(9.09 59.45)" style="font-size: 25px;fill: rgba(0,0,0,0);font-family: ArialMT, Arial">FOLKESKOLENS PRØVER</text>'+
         '</svg></div>'
@@ -47,6 +47,13 @@ var logos = {
         // '    <image width="1160" height="100" xlink:href="images/topfs.jpg"/>'+
         // '    <text transform="translate(9.09 59.45)" style="font-size: 25px;fill: rgba(0,0,0,0);font-family: ArialMT, Arial">FOLKESKOLENS PRØVER</text>'+
         '</svg></div>'
+    },
+    fp10: {
+        svg: '<div style="height:108px;"><svg id="topLogo" style="height:100px;" preserveAspectRatio="xMinYMax slice" data-name="topLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1160 100">' +
+            '    <title>fp10</title>' +
+            // '    <image width="1160" height="100" xlink:href="images/topfs.jpg"/>'+
+            // '    <text transform="translate(9.09 59.45)" style="font-size: 25px;fill: rgba(0,0,0,0);font-family: ArialMT, Arial">FOLKESKOLENS PRØVER</text>'+
+            '</svg></div>'
     },
     htx_teknisk: {
         svg: '<div style="height:108px;"><svg id="topLogo" style="height:100px;" preserveAspectRatio="xMinYMax slice" data-name="topLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1160 100">'+

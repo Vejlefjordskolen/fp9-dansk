@@ -114,7 +114,7 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 21px;
-    margin-bottom: 26px;
+    margin-bottom: 65px;
 }
 
 #ordning {
@@ -975,9 +975,84 @@ audio {
     left: 48%;
 }
 
-
-
 .td-place {
     padding-left: 10px;
     text-align: center;
+}
+
+.textBehindImage {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    color: white;
+    /*transition: opacity 0.5s;*/
+}
+
+//i want thead  
+.textBehindImage__topLeft {
+    position: absolute;
+    top: 14%;
+    left: 13%;
+    opacity: 0;
+}
+
+.textBehindImage__topRight {
+    position: absolute;
+    top: 14%;
+    right: 14%;
+    opacity: 0;
+}
+
+.textBehindImage__bottomLeft {
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
+    opacity: 0;
+}
+
+.textBehindImage__bottomRight {
+    position: absolute;
+    bottom: 16%;
+    right: 12%;
+    opacity: 0;
+}
+
+.textBehindImage__middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.textBehindImage__middleLeft {
+    position: absolute;
+    top: 38%;
+    left: 14%;
+    opacity: 0;
+}
+
+.textBehindImage__middleTop {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    opacity: 0;
+}
+
+.textBehindImage__middleBot {
+    position: absolute;
+    top: 60%;
+    right: 47%;
+    opacity: 0;
+}
+
+.textBehindImage__middleRight {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    opacity: 0;
+}
+
+img.image__citat {
+    white-space: pre;
 }

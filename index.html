@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="da" translate="no" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -25,10 +25,11 @@
     <script type="text/javascript" src="js/builder_timekeeper.js?k=1"></script>
     <link rel="stylesheet" href="css/builder.css?k=1" type="text/css" />
     <link rel="stylesheet" media="print" href="css/print.css?k=1">
-    <script type="text/javascript" src="test/mathquill.js"></script>
+    <!--<script type="text/javascript" src="test/mathquill.js"></script>-->
     <link rel="stylesheet" href="test/mathquill.css" type="text/css" />
     <script type="text/javascript" src="js/crypto/aes.js"></script>
     <script type="text/javascript" src="js/ckeditor_classic/build/ckeditor.js"></script>
+
     <style>
         .table {
             border-spacing: 0;
@@ -98,54 +99,11 @@
                         CheckBrowser();
                     }, 10);
                     return;
-                }
+                }                
             }
             RunBuilder();
             CheckBrowser();
         });
-
-
-
-        function UndefinedToZero(value) {
-            if (typeof value === "undefined") {
-                return 0;
-            }
-            return value;
-        }
-
-        function _Time(frames, seconds, minutes, hours) {
-            frames = UndefinedToZero(frames) / 24;
-            seconds = UndefinedToZero(seconds);
-            minutes = UndefinedToZero(minutes) * 60;
-            hours = UndefinedToZero(hours) * 3600;
-            return hours + minutes + seconds + frames;
-        }
-
-        function TTime(value) {
-            if (typeof value === "undefined") {
-                value = "00:00:00:00";
-            }
-            var split = value.split(":");
-            var frames = (split[3] * 1) / 24;
-            var seconds = split[2] * 1;
-            var minutes = (split[1] * 1) * 60;
-            var hours = (split[0] * 1) * 3600;
-            var output = hours + minutes + seconds + frames;
-            return output;
-        }
-
-        function T(start, end, text, direction) {
-            if (typeof direction === "undefined") {
-                direction = "ltr";
-            }
-            return {
-                start: start,
-                end: end,
-                text: text,
-                direction: direction
-            }
-        }
-
     </script>
 
 </head>
@@ -167,7 +125,9 @@
 
             <div id="content">
                 <div class="top">
-                    <div id="uvmLogo"><img src="images/uvm_logo_stuk.png" alt="logo" /></div>
+                    <div id="uvmLogo">
+                        <img src="images/uvm_logo_stuk.png" alt="logo" />
+                    </div>
                 </div>
 
                 <!--Forside-->
@@ -188,15 +148,15 @@
                                 <div style="margin: 5rem 0rem 4rem;font-weight: 600;">
                                     Du skal vælge en af disse opgaver:
                                     <ol type="1" style="padding: 0 1.5rem;line-height: 3rem;">
-                                        <li>Et ar at prale med</li>
-                                        <li>Motocross – muskler og mod</li>
-                                        <li>Unge og søvn</li>
-                                        <li>Sidste skoledag</li>
+                                        <li>Mine online-venskaber</li>
+                                        <li>Årets ord 2023</li>
+                                        <li>De lange skoledage</li>
+                                        <li>Når hjernen keder sig</li>
                                     </ol>
                                 </div>
                                 <i> Du skal skrive den valgte opgaves nummer og titel på din besvarelse.</i>
                                 <div id="dateofexam">
-                                    Tirsdag den 2. maj 2023<br>
+                                    Fredag den 1. december 2023<br>
                                     Kl. 9.00-12.30
                                 </div>
                             </div>
@@ -205,14 +165,11 @@
 
                         </div>
                     </div>
-
-                    <br /><br /><br /><br />
-
                 </div>
+
 
                 <!--Mellemrum-->
                 <div class="PAGE" data-id="2" data-parentid="0" data-layout="0" data-menutekst=""></div>
-
 
                 <!--Vejledning-->
                 <div class="PAGE" data-id="3" data-parentid="0" data-layout="0" data-menutekst="Før du skriver"
@@ -221,23 +178,19 @@
                     <p>Til eleven<br><br>
                         Til denne prøve i skriftlig fremstilling har du adgang til internettet.
                         <br><br>
-                        Du må ikke kommunikere eller dele dine dokumenter med andre under prøven.
+						Du må ikke kommunikere eller dele dine dokumenter med andre under prøven.
                         <br><br>
-                        Hvis du i din tekst anvender informationer, citater, billeder, ressourcer fra internettet eller
-                        fra andre steder, skal du angive kilderne sidst i besvarelsen. Hvis du anvender kilder fra
-                        prøveoplægget, behøver du ikke at angive dem i din tekst.
+                        Hvis du i din tekst anvender informationer, citater, billeder, ressourcer fra internettet eller fra andre steder, skal du angive kilderne sidst i besvarelsen. Hvis du anvender kilder fra prøveoplægget, behøver du ikke at angive dem i din tekst.
                         <br><br>
-                        Din tekst vurderes på, hvor godt du udfolder de tre vurderingsdimensioner <b>funktion, indhold
-                            og
-                            form</b> på en sammenhængende og meningsfuld måde i din tekst.
-                        <br>
+                        Din tekst vurderes på, hvor godt du udfolder de tre vurderingsdimensioner <b>funktion, indhold og form</b> på en sammenhængende og meningsfuld måde i din tekst.
+                        <br><br>
                         Se vurderingskriterierne nedenfor.
                         <br><br>
                         God arbejdslyst!
                         <br><br>
                     <h2 style="font-size: 24px;">Vurderingskriterier til eleven</h2><br>
                     <b>Der gives én karakter baseret på en helhedsvurdering af tre dimensioner: funktion, indhold og
-                        form</b></p>
+                        form</b>
                     </p>
                     <table cellspacing="2" cellpadding="5" class="border" border="1"
                         style="border-collapse: collapse;width: 100%;"
@@ -268,7 +221,7 @@
                                     Skrivesituation</td>
                                 <td style="width: 64.4715%;border-color: #000000;border-style: solid;padding: 10px;"
                                     data-mce-style="width: 64.4715%; border-color: #000000; border-style: solid;"><i>I
-                                        hvilken grad fungerer din tekst i den skrivesituation, <br>som opgaven
+                                        hvilken grad fungerer din tekst i den skrivesituation, som opgaven
                                         beskriver?</i></td>
                             </tr>
                             <tr>
@@ -299,7 +252,7 @@
                                     Ressourcer</td>
                                 <td style="width: 64.4715%;border-color: #000000;border-style: solid;padding: 10px;"
                                     data-mce-style="width: 64.4715%; border-color: #000000; border-style: solid;"><i>I
-                                        hvilken grad bruger du opgaveforlægget, <br>din egen faglige viden og
+                                        hvilken grad bruger du opgaveforlægget, din egen faglige viden og
                                         internettet i din tekst?</i></td>
                             </tr>
                             <tr>
@@ -313,7 +266,7 @@
                                     Tekstsammen-<br>hæng</td>
                                 <td style="width: 64.4715%;border-color: #000000;border-style: solid;padding: 10px;"
                                     data-mce-style="width: 64.4715%; border-color: #000000; border-style: solid;"><i>I
-                                        hvilken grad hænger din tekst sammen sprogligt, <br>og er der velvalgte afsnit
+                                        hvilken grad hænger din tekst sammen sprogligt, og er der velvalgte afsnit
                                         og modaliteter?</i></td>
                             </tr>
                             <tr>
@@ -327,260 +280,176 @@
                             </tr>
                         </tbody>
                     </table>
+					<br><br><br><br>
                 </div>
 
                 <!--Mellemrum-->
                 <div class="PAGE" data-id="4" data-parentid="0" data-layout="0" data-menutekst=""></div>
 
                 <!--Opgave 1-->
-                <div class="PAGE" data-id="5" data-parentid="0" data-layout="0" data-menutekst="1. Et ar at prale med"
+                <div class="PAGE" data-id="5" data-parentid="0" data-layout="0" data-menutekst="1. Mine online-venskaber"
                     style="display: table-cell; width: 955px;">
                     <div class="box-group">
                         <div class="group fill">
                             <span style="padding:2px 6px;justify-content:space-between;">
-                                <h2 class="header-title">1. Et ar at prale med</h2>
+                                <h2 class="header-title">1. Mine online-venskaber</h2>
                             </span>
                         </div>
                     </div>
-                    <br>
-                    <div style="width: 100%;">
-                        <img src="assets/Et_ar_at_prale_med_samfoto-9757.jpg" alt="" width="100%">
-                        <span style="font-size: 80%;font-style: italic;display: flex;justify-content: end;">Kilde:
-                            Colourbox.dk</span>
-                    </div>
-                    <div style="width: 100%;">
-
-                        <p>
-                            Måske har du har fået fjernet din blindtarm, er faldet ned fra et træ eller er væltet på
-                            cyklen. Hvert ar på kroppen fortæller en historie.<br><br>
-
-                            Et forlag vil udgive en antologi til unge med personlige erindringer om fysiske ar og
-                            den gode historie, der ligger bag. Det kan være det sejeste, det flotteste eller det ar,
-                            som du praler mest med.<br><br>
-
-                            Forlaget ønsker, at de indsendte gode erindringer skal indeholde både tekst og
-                            illustrationer.<br><br>
-
-                            Du vælger at bidrage med din erindring.<br>
-                        </p>
-                        <table border="1" height="278" cellpadding="10"
-                            style="border-collapse: collapse; width: 100%; background-color: #c2e0f4;"
-                            data-mce-style="border-collapse: collapse; width: 688px; height: 278px; background-color: #d2dfed;">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 100%;" data-mce-style="width: 100%;">
-                                        <p>Du skal skrive to tekster: din erindring til antologien og et kort følgebrev
-                                            til forlaget.</p>
-                                        <p>I din erindring skal du:</p>
-                                        <ul>
-                                            <li><em>fortælle,</em>&nbsp;hvordan du fik dit ar</li>
-                                            <li><em>reflektere </em>over, hvorfor du er stolt af dit ar i dag</li>
-                                            <li><em>formulere</em> en titel</li>
-                                            <li><span><em>indsætte</em> illustrationer, der skaber samspil mellem tekst
-                                                    og billeder.</span></li>
-                                        </ul>
-                                        <p><span>I dit følgebrev skal du:</span></p>
-                                        <ul>
-                                            <li><span><em>præsentere </em>dig selv&nbsp;</span></li>
-                                            <li><span><em>argumentere</em> for,<em> </em>hvorfor din erindring skal med
-                                                    i antologien.</span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+					<br>
+                    <p>Foreningen <em>Skole og Forældre </em>har bedt dig om at skrive et indlæg om børn og unges online-venskaber til deres hjemmeside.</p>
+                    <p>Formålet med indlægget er at give forældre indblik i, hvad online-venskaber betyder for unge som dig.</p>
+                    <p>Som inspiration skal du læse nedenstående udsagn, der alle siger noget om online-venskaber:</p>
+                    <p><br></p>
+                    <img pbyg-data-src-id="15544" src="assets/FP9_DA_collage_opgave_1_01122023-P_20349-15544.png" style="width: 90%; margin-left: 5%;" alt="Mange unge mødes udelukkende med venner på nettet. Dybe venskaber findes også på nettet. Kun hver anden ung oplever, at forældrene interesserer sig for deres onlineliv. Mange unge har en god ven, de aldrig har siddet overfor. Jeg savner at se mine venner IRL. På nettet er jeg aldrig ensom. Kilde: dr.dk, Jyllands-Posten, Medierådet, ventilen.dk" >
+                    <p><br></p>
+                    <table cellpadding="5" style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;" border="1" data-mce-style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;">
+                        <tbody>
+                            <tr>
+                                <td><p>Skriv indlægget til foreningen <em>Skole og Forældres</em> hjemmeside.</p><p>I din multimodale tekst skal du:</p>
+                                    <ul>
+                                        <li><em>forklare,</em> hvad et godt online-venskab er for dig</li>
+                                        <li><em>reflektere</em> over nogle af udsagnene fra collagen</li>
+                                        <li><em>diskutere</em> fordele og ulemper ved online-venskaber </li>
+                                        <li><em>illustrere</em> din tekst med billeder og andre grafiske virkemidler.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+					<br><br><br><br>
                 </div>
 
                 <!--Opgave 2-->
                 <div class="PAGE" data-id="6" data-parentid="0" data-layout="0"
-                    data-menutekst="2. Motocross – muskler og mod" style="display: table-cell; width: 955px;">
+                    data-menutekst="2. Årets ord 2023" style="display: table-cell; width: 955px;">
                     <div class="box-group">
                         <div class="group fill">
                             <span style="padding:2px 6px;justify-content:space-between;">
-                                <h2 class="header-title">2. Motocross – muskler og mod</h2>
+                                <h2 class="header-title">2. Årets ord 2023</h2>
                             </span>
                         </div>
                     </div>
-                    <br>
-                    <p>
-                        Forestil dig, at du er i praktik som journalist på en avis. Du skal skrive en reportage fra et
-                        motocross-stævne.
-                        <br><br>
-                        Klik og se filmen:
-                    </p>
-
-                    <div style="width: 100%;">
-                        <div class="new-player mceNonEditable" contenteditable="false">
-                            <div class="new-player-video" style="width: 600px; height: 300px;"
-                                data-mce-style="width: 600px; height: 300px;"><video width="600" height="300"
-                                    src="assets/FP9_maj23_DM_Motocross_2019-9756.mp4" pbyg-data-src-id="9756"
-                                    data-mce-src="https://xn--prvebyggeren-wjb.dk/webdav/mg8yKFlXorwfl5DC2ARmFA/document/FP9_maj23_DM_Motocross_2019.mp4"></video>
-                            </div>
-                            <div class="subtitles new-player-subtitles" style="width: 600px;"
-                                data-mce-style="width: 600px;"><br></div>
-                            <div class="new-player-footer" style="width: 600px;" data-mce-style="width: 600px;">
-                                <div class="new-player-title">DM Motocross 2019</div>
-                            </div>
-                        </div>
-                        <span
-                            style="font-size: 80%;font-style: italic;display: flex;justify-content: end;margin-right: 25rem;">Kilde:
-                            dmmotocross.dk</span>
-                    </div>
-                    <div style="width: 100%;">
-                        <p>
-                            Din reportage skal vise, at motocross er en fascinerende og krævende sportsgren, der kræver
-                            balance, muskler og mod til at give den gas på banen.<br>
-                        </p>
-                        <table border="1"
-                            data-mce-style="border-collapse: collapse; width: 100%; background-color: #c2e0f4;"
-                            cellpadding="10" data-mce-selected="1"
-                            style="border-collapse: collapse; width: 100%; background-color: rgb(194, 224, 244);">
-                            <tbody>
-                                <tr style="height: 80px;" data-mce-style="height: 80px;">
-                                    <td style="width: 100%; height: 80px;" data-mce-style="width: 100%; height: 80px;">
-                                        <p>Skriv en reportage til en avis.<br><br>Som forberedelse til din tekst skal du
-                                            se filmen fra et motocross-stævne. Du skal desuden søge yderligere
-                                            oplysninger om motocross-sporten i Danmark og bruge denne viden i din tekst.
-                                        </p>
-                                        <p>I din tekst skal du:</p>
-                                        <ul>
-                                            <li><em>beskrive</em> stemningen ved stævnet</li>
-                                            <li><em>citere</em> udtalelser fra en eller flere deltagere</li>
-                                            <li><em>forklare</em>, hvilke kompetencer det kræver at blive en god
-                                                motocross-kører</li>
-                                            <li><em>indsætte</em> illustrationer og en faktaboks om motocross-sporten i
-                                                Danmark.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <p><br></p>
+                    <p><img pbyg-data-src-id="12892" src="assets/FP9_DA_aarets_ord_opgave_2_01122023-P_20-12892.png" alt="Årets Ord 2023" style="display: block; width: 90%;" data-mce-src="https://xn--prvebyggeren-wjb.dk/webdav/tuudQ92JNpaxMyN7Ux4SUg/document/FP9_DA_aarets_ord_opgave_2_01122023-P_20.png" data-mce-style="display: block; width: 90%;"></p>
+                    <p></p>
+                    <p></p>
+                    <p>Sproget afspejler den tid, vi lever i, de begivenheder, der sker, og det, vi er optaget af.  "Coronapas", "samfundssind", "klimatosse" er tidligere blevet valgt som årets ord.</p>
+                    <p>Hvilke ord synes <em>du</em> fortæller noget vigtigt om 2023?</p>
+                    <p>Radioprogrammet <em>Klog på Sprog </em>er interesseret i, hvilke ord unge tænker kunne være årets ord. Du vælger at indsende dit forslag, som vil blive læst op i radioen. Som inspiration skal du lytte til uddrag fra programmet,<i> </i>hvor de giver eksempler på årets ord. <i></i></p>
+                    <p><audio controls="controls" controlslist="nodownload" preload="auto" pbyg-data-src-id="15264" src="assets/20349_lydklip-15264.mp3" alt="null" data-mce-src="https://xn--prvebyggeren-wjb.dk/webdav/tcX6wga05LX3UHDQL1PlVg/document/20349_lydklip.mp3"></audio></p>
+                    <pre><em>Kilde: dr.dk</em></pre>
+                    <p><br></p>
+                    <table cellpadding="5" style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;" border="1" data-mce-style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;">
+                        <tbody>
+                            <tr>
+                                <td><p>Skriv dit forslag til <em>Klog på Sprog, </em>som efterfølgende vil blive læst op i radioen.</p><p>Som forberedelse skal du udvælge tre ord, som du mener skal nomineres til årets ord i 2023. Derudover skal du søge baggrundsviden om, hvorfor netop disse tre ord er kommet ind i det danske sprog.</p><p>I din tekst skal du:</p>
+                                    <ul>
+                                        <li><em>præsentere </em>dine tre ord </li>
+                                        <li><em>beskrive </em>situationer, hvor ordene er blevet brugt</li>
+                                        <li><em>argumentere </em>for, at dine ord skal være årets ord.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br><br><br>
                 </div>
 
                 <!--Opgave 3-->
-                <div class="PAGE" data-id="7" data-parentid="0" data-layout="0" data-menutekst="3. Unge og søvn"
+                <div class="PAGE" data-id="7" data-parentid="0" data-layout="0" data-menutekst="3. De lange skoledage"
                     style="display: table-cell; width: 955px;">
                     <div class="box-group">
                         <div class="group fill">
                             <span style="padding:2px 6px;justify-content:space-between;">
-                                <h2 class="header-title">3. Unge og søvn</h2>
+                                <h2 class="header-title">3. De lange skoledage</h2>
                             </span>
                         </div>
                     </div>
                     <br>
-                    <p>
-                        Din skole inviterer elever og forældre til temaaften om unge og søvn. Skolen har inviteret
-                        ekspert i sundhed Chris MacDonald til at holde oplæg. En af hans pointer er, at unge sover alt
-                        for lidt.<br><br>
-                        Du skal på vegne af skolens elever holde et oplæg om unges syn på temaet.
-                        <br><br>
-                        Klik og se uddrag af filmen:
-                    </p>
-
-                    <div style="width: 100%;">
-                        <div class="new-player mceNonEditable" contenteditable="false">
-                            <div class="new-player-video" style="width: 600px; height: 300px;"
-                                data-mce-style="width: 600px; height: 300px;"><video width="600" height="300"
-                                    src="assets/FP9_Maj23 Chris MacDonald Om Soevn-9909.mp4" pbyg-data-src-id="9909"
-                                    data-mce-src="https://xn--prvebyggeren-wjb.dk/webdav/38psxIj3u4wHRNzRvsVQdQ/document/FP9_Maj23 Chris MacDonald Om Soevn.mp4"></video>
-                            </div>
-                            <div class="subtitles new-player-subtitles" style="width: 600px;"
-                                data-mce-style="width: 600px;"><br></div>
-                            <div class="new-player-footer" style="width: 600px;" data-mce-style="width: 600px;">
-                                <div class="new-player-title">Chris MacDonald - Om søvn</div>
-                            </div>
-                        </div>
-                        <span
-                            style="font-size: 80%;font-style: italic;display: flex;justify-content: end;margin-right: 25rem;">Kilde
-                            film: JustHuman/facebook.com. Foto: Colourbox.dk </span>
-                    </div>
-                    <br><br>
-                    <div style="width: 100%;">
-                        <table border="1" cellpadding="10"
-                            data-mce-style="border-collapse: collapse; width: 100%; background-color: #c2e0f4;"
-                            data-mce-selected="1"
-                            style="border-collapse: collapse; width: 100%; background-color: rgb(194, 224, 244);">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 100%;" data-mce-style="width: 100%;">
-                                        <p>Skriv teksten til dit mundtlige oplæg. Efterfølgende bringes teksten på
-                                            skolens hjemmeside.</p>
-                                        <p>Som forberedelse skal du se filmen med Chris MacDonald og søge yderligere
-                                            oplysninger om unge og søvn. Du skal inddrage denne viden i din tekst.</p>
-                                        <p>I din tekst skal du:</p>
-                                        <ul>
-                                            <li><em>kommentere</em>&nbsp;filmens pointer og inddrage egne erfaringer
-                                            </li>
-                                            <li><em>forklare</em> og give eksempler på, hvorfor mange unge sover for
-                                                lidt</li>
-                                            <li><em>argumentere</em> for mulige løsningsforslag, så unge får mere søvn.
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                    <p><img style="width: 80%;" pbyg-data-src-id="11438" src="assets/traette_skoleborn-11438.jpg" alt="" data-mce-src="https://xn--prvebyggeren-wjb.dk/webdav/S2iB56zGyuc3IG_W7fEeVw/document/traette_skoleborn.jpg" data-mce-style="width: 80%;"></p>
+                    <pre><span style="color: #000000;" data-mce-style="color: #000000;"><em>Foto:pixabay.com</em></span></pre>
+                    <p>Nogle unge klager over lange skoledage. De oplever ikke, at de kan få fritidsliv og skole til at hænge sammen. Men er skoledagene for lange? Eller handler det om, hvad der sker i løbet af en skoledag?</p>
+                    <p>Klik og læs Josef Al-Mersals debatindlæg om, hvordan han er påvirket af lange skoledage:</p>
+                    <p><a pbyg-data-href-id="12972" href="assets/FP9_DA_de_lange_skoledage_opgave_0112202-12972.pdf" target="_blank" rel="noopener" data-mce-href="https://xn--prvebyggeren-wjb.dk/webdav/NgQltTaAXfQb0duKnbj8kQ/document/FP9_DA_de_lange_skoledage_opgave_0112202.pdf">Debatindlæg</a></p>
+                    <p>Du vælger at skrive personligt til Josef Al-Mersal om dine erfaringer og tanker.</p>
+					<p><br></p>
+                    <table cellpadding="5" style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;" border="1" data-mce-style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Skriv en mail til Josef.</p>
+                                    <p>I din tekst skal du:</p>
+                                    <ul>
+                                        <li><em>kommentere</em> de af Josefs erfaringer og holdninger, der gør indtryk på dig</li>
+                                        <li><em>beskrive</em> dine egne erfaringer med lange skoledage</li>
+                                        <li><em>reflektere</em> over, hvordan Josef, du og andre unge selv kan gøre jeres egen skoledag bedre.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br><br><br>               
+				</div>
 
                 <!--Opgave 4-->
-                <div class="PAGE" data-id="8" data-parentid="0" data-layout="0" data-menutekst="4. Sidste skoledag"
+                <div class="PAGE" data-id="8" data-parentid="0" data-layout="0" data-menutekst="4. Når hjernen keder sig"
                     style="display: table-cell; width: 955px;">
                     <div class="box-group">
                         <div class="group fill">
                             <span style="padding:2px 6px;justify-content:space-between;">
-                                <h2 class="header-title">4. Sidste skoledag</h2>
+                                <h2 class="header-title">4. Når hjernen keder sig</h2>
                             </span>
                         </div>
                     </div>
                     <br>
-                    <div style="width: 100%;">
-                        <img src="assets/Opg 4. Alkoholfrisidstesklodag-5027.jpg" alt="" width="100%">
-                        <span style="font-size: 80%;font-style: italic;display: flex;justify-content: end;">Foto: Morten
-                            Overgaard. Kilde: sn.dk</span>
+                    <p>Kender du det at kede sig, og tiden bare slæber sig afsted, sekunder føles som minutter, minutter som timer? Men hvad sker der egentlig med din hjerne, når kedsomheden tager over?</p>
+                    <p>Forestil dig, at du er i praktik på online-magasinet <em>viunge.dk.</em></p>
+                    <p>Du skal skrive en artikel til magasinets unge læsere for at gøre dem klogere på hjernen og kedsomhed.</p>
+                    <p>Klik og se denne video:</p>
+					<div style="width: 100%;">
+                        <div class="new-player mceNonEditable" contenteditable="false">
+                            <div class="new-player-video" style="width: 100%; height: 300px;"
+                                data-mce-style="width: 100%; height: 300px;">
+                                <video width="100%" height="300" src="assets/video_opg4_20349-13137.mp4"
+                                    pbyg-data-src-id="13137">
+                                </video>
+                            </div>
+                            <!--<div class="new-player-footer" style="width: 600px;" data-mce-style="width: 600px;">
+                                <div class="new-player-title"></div>
+                                <br />
+                            </div>-->
+                            <div class="new-player-footer" style="width: 100%;" data-mce-style="width: 100%;">
+								<div class="new-player-title"></div>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    <div style="width: 100%;">
-                        <p>
-                            Sundhedsstyrelsen anbefaler, at unge under 18 år holder sig helt fra alkohol. Derfor har din
-                            kommune valgt at forbyde alkohol for elever på offentlige steder på sidste
-                            skoledag.<br><br>
-
-                            Klik og læs, hvordan man i Aarhus Kommune planlagde 9.-klassernes sidste skoledag:<br><br>
-                            Se artiklen her:<br>
-                            <a pbyg-data-href-id="10267" href="assets/FP9_DAN_skr_frem_opg_4_sidste_skoledag_1-10267.pdf"
-                                target="_blank" rel="noopener"
-                                data-mce-href="https://xn--prvebyggeren-wjb.dk/webdav/3FBM3fqWJDNphlb0N2lprw/document/FP9_DAN_skr_frem_opg_4_sidste_skoledag_1.pdf">Druk
-                                i Mindeparken</a><br><br>
-                            Du vælger at skrive et brev til din lokale kommunalbestyrelse, hvor du giver din mening til
-                            kende om en alkoholfri sidste skoledag.<br>
-                        </p>
-                        <table border="1" height="278" cellpadding="10"
-                            style="border-collapse: collapse; width: 100%; background-color: #c2e0f4;"
-                            data-mce-style="border-collapse: collapse; width: 688px; height: 278px; background-color: #d2dfed;">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 100%;" data-mce-style="width: 100%;">
-                                        <p>Skriv et brev til din lokale kommunalbestyrelse.</p>
-                                        <p>Som forberedelse skal du læse artiklen og inddrage eksemplet fra Aarhus i dit
-                                            brev.</p>
-                                        <p><span>I din tekst skal du:</span></p>
-                                        <ul>
-                                            <li><i>argumentere</i> for din holdning til beslutningen</li>
-                                            <li><i>beskrive </i>den sidste skoledag, som du drømmer om</li>
-                                            <li><span><em>diskutere,</em> hvad der skal til for at skabe en festkultur
-                                                    for unge, hvor der er plads til alle.</span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+					<pre><span style="color: #000000;" data-mce-style="color: #000000;"><em>Foto:pixabay.com/video:videnskab.dk</em></span></pre>
+					<p><br></p>
+                    <table cellpadding="5" style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;" border="1" data-mce-style="border-collapse: collapse; width: 99%; background-color: #c2e0f4;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Skriv artiklen til <em>viunge.dk</em></p>
+                                    <p>Som forberedelse til din tekst skal du se videoen og bruge denne viden i din artikel.</p>
+                                    <p>I din multimodale tekst skal du:</p>
+                                    <ul>
+                                        <li><em>beskrive</em> emnet ved at bruge mindst to af disse mellemrubrikker:
+                                            <ul style="list-style-type: circle;" data-mce-style="list-style-type: circle;">
+												<li><span>Hjerner har brug for pusterum</span></li>
+												<li><span>Kreativitet og opgaveløsning</span></li>
+												<li><span>Kedsomhed har svære betingelser</span></li>
+											</ul>
+                                        </li>
+                                        <li><span><em>præsentere</em> og <em>begrunde</em> tre gode råd til, hvordan man som ung kan give hjernen ro til at kede sig</span></li>
+                                        <li><span><em>illustrere</em> din tekst med billeder, der understøtter dine valgte mellemrubrikker.</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br><br><br>
                 </div>
-
-
             </div> <!-- END CONTENT -->
         </div> <!-- END MAIN -->
         <div id="bottomMenu"></div>

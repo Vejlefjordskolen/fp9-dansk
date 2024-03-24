@@ -113,8 +113,9 @@ var UVM = {
             htx: { sidebar: '<div id="school-title">htx</div>' + '<div id="exam-title">højere teknisk eksamen</div>' },
             hf: { sidebar: '<div id="school-title">hf</div>' + '<div id="exam-title">højere forberedelseseksamen</div>' },
             fvu: { sidebar: '<div id="school-title">fvu</div>' + '<div id="exam-title">forberedende voksenundervisning</div>' },
-            fs: { sidebar: '<div id="school-title">fp10</div>' + '<div id="exam-title">folkeskolens prøver</div>' },
+            fs: { sidebar: '<div id="school-title">fp9</div>' + '<div id="exam-title">folkeskolens prøver</div>' },
             fp9: { sidebar: '<div id="school-title">fp9</div>' + '<div id="exam-title">folkeskolens prøver</div>' },
+            fp10: { sidebar: '<div id="school-title">fp10</div>' + '<div id="exam-title">folkeskolens prøver</div>' },
             // avu: { sidebar: '<div id="school-title">avu</div>' + '<div id="exam-title">almen voksen uddannelse eksamen</div>' },
             // vaf: { sidebar: '<div id="school-title">vaf</div>' + '<div id="exam-title">de gymnasiale uddannelser eksamen</div>' },
         }
